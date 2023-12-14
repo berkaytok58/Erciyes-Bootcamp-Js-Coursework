@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div class="" style="display: flex; flex-direction: column; width: 250px; height: 100px; gap:10px; background-color: aqua;">
+    <input type="text" id="numa" style="border-radius:5% ;">
+    <input type="text" id="numb" style="">
+   </div>
+
+    
+    <button id="topla" onclick="toplam()">+</button>
+    <button id="cikar" onclick="cikar()">-</button>
+    <button id="carp"onclick="carp()">*</button>
+    <button id="bol"onclick="bol()">/</button>
+    
+
+    <h1 id="result" style="background-color: aqua; width: 50px; height: 50;"></h1>
+
+
+<script>
+
+  let toplabtn = document.getElementById('topla')
+  let cikarbtn = document.getElementById('cikar')
+  let carpbtn = document.getElementById('carp')
+  let bolbtn = document.getElementById('bol')
+
+  let res = document.getElementById('result')
+
+  function toplam() {
+    let numa = document.getElementById('numa').value
+    let numb = document.getElementById('numb').value
+    
+    let result = parseInt(numa) + parseInt(numb)
+    res.innerHTML = result
+  }
+  function cikar() {
+    let numa = document.getElementById('numa').value
+    let numb = document.getElementById('numb').value
+    
+    let result = parseInt(numa) - parseInt(numb)
+    res.innerHTML = result
+  }
+  function carp() {
+    let numa = document.getElementById('numa').value
+    let numb = document.getElementById('numb').value
+    
+    let result = parseInt(numa) * parseInt(numb)
+    res.innerHTML = result
+  }
+  function bol() {
+    let numa = document.getElementById('numa').value
+    let numb = document.getElementById('numb').value
+    
+    let result = parseInt(numa) / parseInt(numb)
+    res.innerHTML = result
+  }
+
+</script>
+</body>
+</html>

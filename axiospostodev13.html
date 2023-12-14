@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios post</title>
+</head>
+<body>
+    <div>
+        <label for="">Name</label>
+        <input type="text" id="name">
+    </div>
+
+    <div>
+        <label for="">Description</label>
+        <input type="text" id="description">
+    </div>
+
+    <button onclick="newCategories()">add</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function newCategories() {
+            var name = document.getElementById("name").value;
+            var description = document.getElementById("description").value;
+
+            var newData = {
+                name: name,
+                description: description
+            };
+
+            axios.post("https://northwind.now.sh/api/categories", newData)
+    
+        }
+    </script>
+</body>
+</html>

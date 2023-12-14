@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 5%;
+            object-fit: cover;
+            transition: all 0.5s ease-in-out;
+        }
+       
+
+    </style>
+    
+</head>
+<body>
+    <img name="slide" width="400" height="400">
+</body>
+<script>
+    var i = 0;
+    var photos = [
+        "https://picsum.photos/id/1/400/200",
+        "https://picsum.photos/id/2/400/200",
+        "https://picsum.photos/id/9/400/200",
+        "https://picsum.photos/id/10/400/200",
+        "https://picsum.photos/id/24/400/200",
+        "https://picsum.photos/id/20/400/200"
+    ]
+
+    var duration = 3000;
+    function changeImage() {
+        document.slide.src = photos[i];
+        if (i < photos.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        }
+        setTimeout("changeImage()", duration);
+    }
+    window.onload = changeImage
+
+</script>
+</html>

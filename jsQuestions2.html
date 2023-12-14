@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+//1.Soru: "   Çağatay Yıldız" isimli metindeki boşlukları kaldır.
+
+let name = "Çağatay Yıldız"
+name = name.replace(" ", "")
+console.log(name);
+
+/////////////////////////////////////////////////////////////////////
+
+//2.Soru: "cagatay yildiz" kelimesindeki boşlukları sil tüm harfleri büyült.
+
+let name2 = "cagatay yildiz"
+name2 = name2.replace(" ", "").toUpperCase()
+console.log(name2);
+
+////////////////////////////////////////////////////////////////////////
+
+//3.Soru: "******Çağatay Yıldız" isimli metindeki yıldızları kaldır.
+
+let name3 = "******Çağatay Yıldız"
+name3 = name3.replace("******", "")
+console.log(name3);
+
+/////////////////////////////////////////////////////////////////////////////
+
+//4.Soru: "Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap.
+
+let name4 = "Çağatay  Yıldız"
+name4 = name4.replace("  ", " ")
+console.log(name4);
+
+//////////////////////////////////////////////////////////////////////////////
+
+//5.Soru: "**Tech Career**" isimli metindeki yıldızları kaldır.
+
+let name5 =  "**Tech Career**"
+name5 = name5.replaceAll("*","")
+console.log(name5);
+
+///////////////////////////////////////////////////////////////////////////////////
+
+//6.Soru: "Tech Career" isimli metnin soluna ve sağına 3 yıldız koy.
+
+let name6 = "Tech Career"
+name6 = ("***" + name6 + "***")
+console.log(name6);
+
+///////////////////////////////////////////////////////////////////////////////////
+
+//7.Soru: "Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült.
+
+let name7 = "Tech Career Bilişim teknolojileri"
+name7 = name7.substring(0,20) + name7.substring(20).toUpperCase()
+console.log(name7);
+
+////////////////////////////////////////////////////////////////////////////////
+
+//8.Soru: "tech career" kelimelerin ilk harflerini büyült.
+
+let name8 =  "tech career"
+name8 = name8.substring(0,1).toUpperCase() + name8.substring(1,5) + name8.substring(5,6).toUpperCase() + name8.substring(6)
+console.log(name8);
+
+
+
+    </script>
+</body>
+</html>

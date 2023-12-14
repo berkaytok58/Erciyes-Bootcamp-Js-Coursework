@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="number" id="num">
+     <button id="btn">Add</button>
+
+<ul id="ul">
+
+</ul>
+
+
+
+
+<script>
+let btn = document.getElementById('btn')
+let counter = 0
+btn.addEventListener('click', ()=>{
+    
+if(counter < 15){
+    let number = Math.floor(Math.random() * 100)
+    let ulDOM = document.getElementById('ul')
+    let liDOM = document.createElement('li')
+    liDOM.innerHTML = number
+    ulDOM.appendChild(liDOM)
+}
+counter++
+})
+
+</script>
+
+
+
+
+</body>
+</html>

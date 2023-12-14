@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    
+<div>
+    <label for="Id"></label>
+    <input type="text" id="categorieId">
+</div>
+<div>
+    <button onclick="deleteCat()">delete</button>
+</div>
+
+
+
+
+</body>
+
+<script>
+function deleteCat(){
+    var categorieId = document.getElementById("categorieId").value
+
+    axios.delete("https://northwind.now.sh/api/categories/" + categorieId)
+}
+</script>
+</html>

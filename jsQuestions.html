@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    // 250 ye kadar olan sayıalrın toplamı nedir?
+
+    let sum = 0
+    for(let i = 0; i <=250; i++){
+        sum += i
+    }
+    console.log(sum);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // 25 ile 125 arasındaki sayıların toplamı nedir?
+
+  let sum2 = 0
+    for(let i = 25; i <=125; i++){
+        sum2 += i
+    }
+    console.log(sum2);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // 1 ile 1000 Arasındaki Sayıların Toplamının ortalaması nedir?
+
+  let sum3 = 0
+  let i
+
+    for(i = 1; i <=1000; i++){
+        sum3 += i
+    }
+
+    let result = sum3 / i
+    
+    console.log(result);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // 1 den 100 e kadar olan sayılardan 5’e bölünenleri ekrana yazdırınız
+
+for(let i = 1; i < 100 ; i++){
+        if(i % 5 === 0){
+            console.log(i)
+        }
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // En büyük sayıyı bulunuz
+
+  var numbers = [33, 11, -5, 20, 1, 55, 100, 2, 94, 55, 11]
+
+  let maxNum = numbers[0]
+
+  for(let i = 1; i < numbers.length; i++){
+    if(numbers[i] > maxNum){
+        maxNum = numbers[i]
+    }
+  }
+
+  console.log(maxNum);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var numbers2 = [33, 11, -5, 20, 1, 55, 100, 2, 94, 55, 11]
+
+let minNum = numbers2[0]
+
+for(let i = 1; i < numbers2.length; i++){
+  if(numbers2[i] < minNum){
+      minNum = numbers2[i]
+  }
+}
+
+console.log(minNum);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

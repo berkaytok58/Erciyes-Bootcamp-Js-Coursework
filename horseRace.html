@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 1000px;
+            height: 500px;
+            background-color: rgb(111, 255, 0);
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            
+        }
+
+        .horse{
+           margin-bottom: 20px;
+           margin-left: 20px;
+        }
+
+        .container{
+          display: flex;
+          flex-direction: row;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <button onclick="btn()" style="background-color: rgb(42, 165, 79); color: white; width: 100px; height: 50px; margin-top: 20px; margin-left:20px ; margin-bottom: 50px;">Start</button>
+               <div id="horse1" class="horse"><img src="https://vetrehberi.com/wp-content/uploads/2021/05/arap-at-irki-ve-ozellikleri.jpg" alt=""style=" width: 150px; height: 100px;"></div>
+               <div id="horse2" class="horse"><img src="https://www.listedelisi.com/wp-content/uploads/2016/11/16.jpg" alt=""style=" width: 150px; height: 100px;"></div>
+               <div id="horse3" class="horse"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Cavalo_Arabe_REFON.jpg/260px-Cavalo_Arabe_REFON.jpg" alt=""style=" width: 150px; height: 100px;"></div>
+        </div>
+        <div class="end" style="height: 500px; width: 20px; background-color: red; margin-top: 100px; text-align: center;color: white; font-size: 20px;" >
+          <br><br><br><br><br><br>F<br><br>I<br><br>N<br><br>I<br><br>S<br><br>H
+        </div>
+    </div>
+
+    
+    <script>
+        function btn() {
+            for (let i = 1; i < 4; i++) {
+        
+                let currentMargin = parseInt(document.getElementById('horse' + i).style.marginLeft) || 0;
+                let newMargin = currentMargin + Math.floor(Math.random() * 20);
+                newMargin = Math.min(800, newMargin);
+                document.getElementById('horse' + i).style.marginLeft = newMargin + "px";
+                
+            }
+        }
+    
+        setInterval(() => {
+            btn();
+        }, 250);
+    </script>
+    
+</body>
+</html>

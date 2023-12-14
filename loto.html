@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        }
+
+        .container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 60px;
+        padding-right: 200px;
+        padding-left: 200px;
+        margin-bottom: 50px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <button onclick="start()">start</button>
+
+
+<script>
+    function start(){
+        let randomNumbers = []
+
+        for(i = 0; i < 6; i++){
+            let randomNumber = Math.floor(Math.random() * 49)
+
+            if(!randomNumbers.includes(randomNumber))
+                randomNumbers.push(randomNumber)
+            
+
+            let box = document.querySelectorAll(".box");
+
+            for (let i = 0; i < box.length; i++) {
+              box[i].innerHTML = randomNumbers[i];
+        }
+
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>
